@@ -26,9 +26,12 @@ Create a `.env` file in the project root:
 GOOGLE_API_KEY=your_api_key_here
 ```
 ### Ingest documents:
+Run the script to process and index your documents for retrieval:
 ```bash
 python ingest.py data/faq.pdf
 ```
+- `data/faq.pdf` → path to the document or folder you want to index.
+- Supports `.pdf`, `.txt`, `.md`, `.docx`.
 ### Run the app:
 ```bash
 streamlit run app.py
