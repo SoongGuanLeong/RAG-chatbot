@@ -30,7 +30,7 @@ Run the script to process and index your documents for retrieval:
 ```bash
 python ingest.py data/faq.pdf
 ```
-- `data/faq.pdf` → path to the document or folder you want to index.
+- `data/faq.pdf` → path to the document or folder you want to index. Full folder if not specified.
 - Supports `.pdf`, `.txt`, `.md`, `.docx`.
 ### Run the app:
 ```bash
