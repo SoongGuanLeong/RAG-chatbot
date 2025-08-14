@@ -1,2 +1,40 @@
 # RAG-chatbot
-A Retrieval-Augmented Generation (RAG) chatbot that answers user questions based on custom document knowledge bases. Built using LangChain, FAISS, and Google Gemini embeddings, with a Streamlit frontend for interactive Q&amp;A.
+A Retrieval-Augmented Generation (RAG) chatbot that answers user questions based on custom document knowledge bases. Built using LangChain, FAISS, and Google Gemini embeddings, with a Streamlit frontend for interactive Q&A.
+
+## Features:
+- Ingests PDF, DOCX, TXT, and Markdown documents.
+- Splits large documents into token-based chunks for efficient retrieval.
+- Uses Google Gemini embeddings to vectorize content.
+- Retrieves relevant context using FAISS and generates answers via LLMs.
+- Filters disallowed questions for safety.
+- Maintains chat history in Streamlit session state.
+
+## Tech Stack:
+Python | LangChain | FAISS | Google Gemini AI | Streamlit | .env
+
+## Getting Started
+### Prerequisites:
+- Python 3.10
+- Virtual environment (recommended)
+### Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+### Add environment variables:
+Create a `.env` file in the project root:
+```ini
+GOOGLE_API_KEY=your_api_key_here
+```
+### Ingest documents:
+```bash
+python ingest.py data/faq.pdf
+```
+### Run the app:
+```bash
+streamlit run app.py
+```
+
+## Notes:
+- Supports multilingual embeddings via Google Gemini.
+- Includes question filtering guardrails.
+- Rebuild index by rerunning `ingest.py`.
